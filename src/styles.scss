@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/purple-green.css';
+.mat-card {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  width: 30vw;
+  height: 50vh;
+  margin: 0 auto;
+}
+.content {
+  display: flex;
+
+  justify-content: space-around;
+}
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-content: center;
+  text-align: center;
+
+  justify-content: space-around;
+}
+.weatherIcon {
+  width: 8em;
+  height: 8em;
+  margin: 0 auto;
+  border: none;
+}
+.alignWin {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
