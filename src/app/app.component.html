@@ -1,92 +1,97 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
+
+<nav>
+  <h1 class="WC">
     {{ title }}
   </h1>
-</div>
-<div>
-  <h2>Contestants</h2>
-  <div class="content">
-    <mat-card>
-      <div>
-        <div class="centerContent">
-          <img
-            *ngIf="city1"
-            class="weatherIcon"
-            src="{{ weather1.current.condition.icon }}"
-          />
-          <mat-card-title>{{ weather1.location.name }}</mat-card-title>
-          <mat-card-subtitle
-            >Temperature: {{ weather1.current.temp_f }}</mat-card-subtitle
-          >
-          <mat-card-subtitle
-            >Precipitation:
-            {{ weather1.current.precip_mm }} mm</mat-card-subtitle
-          >
-          <mat-card-subtitle
-            >Humidity: {{ weather1.current.humidity }}</mat-card-subtitle
-          >
+</nav>
+<body>
+  <div>
+    <mat-card id="contestants">Contestants</mat-card>
+    <div class="content">
+      <mat-card id="city1">
+        <div>
+          <div class="centerContent" *ngIf="city1">
+            <img
+              *ngIf="city1"
+              class="weatherIcon"
+              src="{{ weather1['current']['condition']['icon'] }}"
+            />
+            <mat-card-title>{{ city1 }}</mat-card-title>
+            <mat-card-subtitle
+              >Temperature: {{ weather1['current'].temp_f }}</mat-card-subtitle
+            >
+            <mat-card-subtitle
+              >Precipitation:
+              {{ weather1['current'].precip_mm }} mm</mat-card-subtitle
+            >
+            <mat-card-subtitle
+              >Humidity: {{ weather1['current'].humidity }}</mat-card-subtitle
+            >
+          </div>
         </div>
-      </div>
 
-      <form class="form-inline">
-        <input placeholder="Enter City" #search />
+        <form class="form-inline">
+          <input id="input" placeholder="Enter City" #search />
 
-        <input
-          type="button"
-          (click)="get_weather1(search.value)"
-          value="Get Weather"
-        />
-      </form>
-    </mat-card>
-
-    <div *ngIf="city2" class="alignWin centerContent">
-      <mat-card>
-        <mat-card-subtitle>Who Will Come Out On Top?</mat-card-subtitle>
-        <div *ngIf="winner">
-          <mat-card-title>{{ winner | uppercase }}</mat-card-title>
-
-          <button mat-raised-button color="primary" (click)="compare()">
-            Compare
-          </button>
-        </div>
-      </mat-card>
-    </div>
-
-    <mat-card>
-      <div>
-        <div class="centerContent">
-          <img
-            *ngIf="city2"
-            class="weatherIcon"
-            src="{{ weather2.current.condition.icon }}"
-          />
-          <mat-card-title>{{ weather2.location.name }}</mat-card-title>
-          <mat-card-subtitle
-            >Temperature: {{ weather2.current.temp_f }}</mat-card-subtitle
-          >
-          <mat-card-subtitle
-            >Precipitation:
-            {{ weather2.current.precip_mm }} mm</mat-card-subtitle
-          >
-          <mat-card-subtitle
-            >Humidity: {{ weather2.current.humidity }}</mat-card-subtitle
-          >
-        </div>
-      </div>
-
-      <form class="form-inline">
-        <div class="form-group">
-          <input type="search" placeholder="Enter city" #search1 />
           <input
             type="button"
+            (click)="get_weather1(search.value)"
+            value="Get Weather"
+            id="getWeatherBtn"
+          />
+        </form>
+      </mat-card>
+
+      <div *ngIf="city2" class="alignWin centerContent">
+        <mat-card id="winnerCard">
+          <mat-card-subtitle>Who Will Come Out On Top?</mat-card-subtitle>
+          <div *ngIf="winner">
+            <mat-card-title class="ani" data-shadow="dang!">{{
+              winner | uppercase
+            }}</mat-card-title>
+
+            <button mat-raised-button color="secondary" (click)="compare()">
+              Compare
+            </button>
+          </div>
+        </mat-card>
+      </div>
+
+      <mat-card id="city2">
+        <div>
+          <div class="centerContent" *ngIf="city2">
+            <img
+              *ngIf="city2"
+              class="weatherIcon"
+              src="{{ weather2.current.condition.icon }}"
+            />
+            <mat-card-title>{{ weather2['location'].name }}</mat-card-title>
+            <mat-card-subtitle
+              >Temperature: {{ weather2['current'].temp_f }}</mat-card-subtitle
+            >
+            <mat-card-subtitle
+              >Precipitation:
+              {{ weather2['current'].precip_mm }} mm</mat-card-subtitle
+            >
+            <mat-card-subtitle
+              >Humidity: {{ weather2['current'].humidity }}</mat-card-subtitle
+            >
+          </div>
+        </div>
+
+        <form class="form-inline">
+          <input id="input" type="search" placeholder="Enter city" #search1 />
+          <input
+            type="button"
+            id="getWeatherBtn"
             (click)="get_weather2(search1.value)"
             value="Get Weather"
           />
-        </div>
-      </form>
-    </mat-card>
+        </form>
+      </mat-card>
+    </div>
   </div>
-</div>
+</body>
 
 <router-outlet></router-outlet>
