@@ -1,6 +1,6 @@
 # WeatherClash
 
-## About Weather Clash
+### About Weather Clash
 WC was a coding challenge given to me. I was tasked with building a web app that could take two unputed cities and then pick a winner based on the weather stats recieved from an API. 
 
 
