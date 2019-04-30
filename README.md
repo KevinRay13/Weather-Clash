@@ -16,8 +16,14 @@ WC was a coding challenge given to me. I was tasked with building a web app that
 ## Exciting Challenges
 Creating a point system to assign points to undesirable weather conditions was a fun challenge to wrap my mind around. The winner would end up being the city with the least amount of points after checking each cities conditions. I also built this project in Angular, being newer to Angular this presented a difficult challenge but before long I was starting to enjoy the features Angular provides. 
 
+## Accomplishments
+- Succesfully compares two cites based on current weather conditions of each(rain, temperature, humidity)
+- Gained better understanding of data typing with Typescript
+- Animated gradients, red team and blue team
+- Winner gets their city displayed in a nice animated font
+
 ## Tech Used
-Angular | Material UI | Apixu API | Javascript | HTML | CSS
+Angular | Material UI | Apixu API | Javascript | HTML | CSS | Typescript
 
 
 
