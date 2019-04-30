@@ -1,28 +1,25 @@
 # WeatherClash
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+## About Weather Clash
+WC was a coding challenge given to me. I was tasked with building a web app that could take two unputed cities and then pick a winner based on the weather stats recieved from an API. 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Screenshots
+### Home
+![Home](/wchome.png)
+### Choose Cities
+![Cities](/wccities.png)
+### Winner!
+![Winner](/wcwinner.png)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Exciting Challenges
+Creating a point system to assign points to undesirable weather conditions was a fun challenge to wrap my mind around. The winner would end up being the city with the least amount of points after checking each cities conditions. I also built this project in Angular, being newer to Angular this presented a difficult challenge but before long I was starting to enjoy the features Angular provides. 
 
-## Build
+## Tech Used
+Angular | Material UI | Apixu API | Javascript | HTML | CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# Weather-Clash
